@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineSort - O que assistir hoje?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>🎬 CineSort</h1>
+      <p>Sua próxima sessão de cinema começa aqui.</p>
+    </header>
+
+    <div class="controls">
+      <select id="genreSelect">
+        <option value="" disabled selected>Escolha um tema...</option>
+        <option value="romance">❤️ Romance</option>
+        <option value="terror">👻 Terror</option>
+        <option value="acao">💥 Ação</option>
+        <option value="ficcao">🚀 Ficção Científica</option>
+        <option value="comedia">😂 Comédia</option>
+      </select>
+
+      <button id="drawBtn">Sortear Filme</button>
+    </div>
+
+    <!-- Tela do rolete animado -->
+    <div id="roulette" class="roulette-box">
+      <p class="roulette-label">SORTEANDO...</p>
+      <div id="rouletteTitle" class="roulette-title">🍿🍿🍿</div>
+    </div>
+
+    <!-- Card com o resultado detalhado -->
+    <div id="resultCard" class="result-card">
+      <div class="card-header">
+        <span id="movieGenre" class="genre-tag">Gênero</span>
+        <span id="movieYear" class="year-tag">2000</span>
+      </div>
+      
+      <h2 id="movieTitle">Nome do Filme</h2>
+      <p class="meta-info"><strong>Direção:</strong> <span id="movieDirector">---</span></p>
+      
+      <p id="movieDescription" class="description">Sinopse detalhada...</p>
+      
+      <div class="where-to-watch">
+        📍 <strong>Onde assistir:</strong> <span id="moviePlatforms">---</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
