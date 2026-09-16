@@ -266,3 +266,49 @@ button:active {
     font-size: 1.7rem;
   }
 }
+/* Fundo Fixo Atrás de Tudo */
+.background-carousel {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0.2;
+  filter: blur(2px);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+/* O Container do aplicativo precisa ter z-index maior para ficar por cima */
+.container {
+  position: relative;
+  z-index: 10;
+}
+
+/* Trilho de Imagens com Animação Continuada */
+.track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollBg 25s linear infinite;
+}
+
+.track img {
+  width: 180px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@keyframes scrollBg {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
